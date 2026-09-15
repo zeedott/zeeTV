@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "Movie_App",
-    "slug": "Movie_App",
+    "name": "ZeeTV",
+    "slug": "ZeeTV",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "movieapp",
+    "scheme": "zeetv",
     "userInterfaceStyle": "automatic",
     "ios": {
       "icon": "./assets/expo.icon"
