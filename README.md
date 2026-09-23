@@ -52,7 +52,8 @@ assets/
 
 ### 1. Clone the repository
 
-```https://github.com/zeedott/zeeTV.git
+```
+git clone https://github.com/zeedott/zeeTV.git
 ```
 
 ### 2. Go to the project directory
