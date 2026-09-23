@@ -52,14 +52,13 @@ assets/
 
 ### 1. Clone the repository
 
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+```https://github.com/zeedott/zeeTV.git
 ```
 
 ### 2. Go to the project directory
 
 ```bash
-cd Movie-App
+cd zeeTV
 ```
 
 ### 3. Install dependencies
