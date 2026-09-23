@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 import { ThemedText } from '@/components/themed-text';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const { width } = Dimensions.get('window');
 const NUM_COLUMNS = 3;
@@ -132,6 +133,12 @@ export default function LibraryScreen() {
 
   return (
     <SafeAreaView style={styles.screen}>
+     <LinearGradient
+                    colors={['#3b2f63', '#1a1a2e']}
+                    start={{ x: 0, y: 0 }}
+                    end={{ x: 0, y: 1 }}
+                    style={styles.topGradient}
+                  />
       {/* Top tabs */}
       <ScrollView
         horizontal
@@ -193,7 +200,14 @@ export default function LibraryScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#323252',
+  },
+  topGradient: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 420,
   },
   topTabsRow: {
     paddingHorizontal: 16,
@@ -207,7 +221,7 @@ const styles = StyleSheet.create({
   },
   topTabText: {
     fontSize: 17,
-    color: '#999',
+    color: '#ffffff',
     fontWeight: '500',
   },
   topTabTextActive: {
@@ -236,7 +250,7 @@ const styles = StyleSheet.create({
   },
   filterChipText: {
     fontSize: 14,
-    color: '#999',
+    color: '#ffffff',
   },
   filterChipTextActive: {
     color: '#000',
@@ -277,7 +291,8 @@ const styles = StyleSheet.create({
   cardTitle: {
     fontSize: 13,
     fontWeight: '600',
-    color: '#000',
+    color: '#ffffff',
     marginTop: 6,
+    // marginBottom: 100,
   },
 });

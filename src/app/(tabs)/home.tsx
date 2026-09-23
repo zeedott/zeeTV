@@ -12,6 +12,7 @@ import {
 import { Ionicons } from '@expo/vector-icons';
 import { ThemedText } from '@/components/themed-text';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const { width } = Dimensions.get('window');
 
@@ -113,6 +114,12 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView style={styles.screen}>
+     <LinearGradient
+                colors={['#3b2f63', '#1a1a2e']}
+                start={{ x: 0, y: 0 }}
+                end={{ x: 0, y: 1 }}
+                style={styles.topGradient}
+              />
       <ScrollView showsVerticalScrollIndicator={false}>
         {/* Top nav */}
         <View style={styles.topNavRow}>
@@ -142,9 +149,6 @@ export default function HomeScreen() {
               );
             })}
           </ScrollView>
-          <TouchableOpacity style={styles.heartButton}>
-            <Ionicons name="heart-outline" size={20} color="#000" />
-          </TouchableOpacity>
         </View>
 
         {/* Search bar */}
@@ -158,7 +162,7 @@ export default function HomeScreen() {
             />
           </View>
           <TouchableOpacity style={styles.menuButton}>
-            <Ionicons name="menu" size={24} color="#000" />
+            <Ionicons name="menu" size={24} color="#ffffff" />
           </TouchableOpacity>
         </View>
 
@@ -216,7 +220,7 @@ export default function HomeScreen() {
             <View style={styles.sectionDot} />
             <ThemedText style={styles.sectionTitle}>Top Picks</ThemedText>
           </View>
-          <Ionicons name="chevron-forward" size={20} color="#333" />
+          <Ionicons name="chevron-forward" size={20} color="#ffffff" />
         </View>
 
         {/* Region tabs */}
@@ -262,7 +266,14 @@ export default function HomeScreen() {
 const styles = StyleSheet.create({
   screen: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#1a1a2e',
+  },
+  topGradient: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    height: 420,
   },
   topNavRow: {
     flexDirection: 'row',
@@ -281,10 +292,10 @@ const styles = StyleSheet.create({
   topNavText: {
     fontSize: 17,
     fontWeight: '600',
-    color: '#999',
+    color: '#ffffff',
   },
   topNavTextActive: {
-    color: '#000',
+    color: '#2563eb',
     fontWeight: '800',
   },
   topNavUnderline: {
@@ -318,7 +329,7 @@ const styles = StyleSheet.create({
   searchInput: {
     flex: 1,
     fontSize: 14,
-    color: '#000',
+    color: '#ffffff',
   },
   menuButton: {
     padding: 4,
@@ -374,15 +385,15 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   pillActive: {
-    backgroundColor: '#e0e7ff',
+    backgroundColor: '#2563eb',
   },
   pillIcon: {
     fontSize: 14,
   },
   pillText: {
+    color: '#fff',
     fontSize: 14,
     fontWeight: '700',
-    color: '#333',
   },
   sectionHeaderRow: {
     flexDirection: 'row',
@@ -405,7 +416,7 @@ const styles = StyleSheet.create({
   sectionTitle: {
     fontSize: 20,
     fontWeight: '800',
-    color: '#000',
+    color: '#ffffff',
   },
   regionRow: {
     paddingHorizontal: 16,
@@ -414,7 +425,7 @@ const styles = StyleSheet.create({
   },
   regionText: {
     fontSize: 15,
-    color: '#999',
+    color: '#ffffff',
     fontWeight: '500',
   },
   regionTextActive: {
